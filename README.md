@@ -52,6 +52,6 @@ bash /home/jetson/zed_capture_ws/diagnostics/field_capture/check_capture.sh \
 
 依赖现有 ROS1 Noetic、Livox 工作空间、libusb、OpenCV/TurboJPEG，以及 `/home/jetson/clock_diag`。采集使用仓库内的 Open Capture/HIDAPI，不依赖 ZED SDK/CUDA。配置见 [capture_hd720_c5i.yaml](diagnostics/field_capture/capture_hd720_c5i.yaml)，其中设备序列号、GNSS 串口及本机路径需要与实际环境匹配。
 
-这是现有 Jetson 的源码备份，**不是克隆后即可启动的完整运行环境**。构建二进制未入库；现场入口依赖 `build_continuous_v3` 和冻结基线检查。在新机器恢复时，需要单独核对依赖、构建和基线，不能跳过保护检查。备份范围见 [CODE_BACKUP.md](CODE_BACKUP.md)。
+这是现有 Jetson 的源码备份，**不是克隆后即可启动的完整运行环境**。构建二进制未入库；现场入口依赖 `build_continuous_v3` 和冻结基线检查。在新机器恢复时，需要单独核对依赖、构建和基线，不能跳过保护检查。实验报告和备份记录不纳入仓库。
 
-源码、配置、测试和说明已纳入版本管理；采集数据、日志、缓存及构建二进制未纳入。`.gitignore` 使用明确文件白名单，新增源码时需要同步更新。`CODE_BACKUP_SHA256.json` 记录首次备份快照的哈希，README 后续更新以 Git 历史为准。
+仓库保留源码、配置、测试、许可证及本 README；实验报告、采集数据、日志、缓存及构建二进制未纳入。`.gitignore` 使用明确文件白名单，新增源码时需要同步更新。
