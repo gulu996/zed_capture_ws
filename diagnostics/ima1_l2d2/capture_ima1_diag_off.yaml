@@ -1,0 +1,41 @@
+# No calibration, fusion, depth, CUDA, SDK, image rotation or 0.1 s compensation.
+resolution: HD720
+fps: 30
+serial: 38003368
+video_id: -1
+queue_mb: 256
+anchor_path: /home/jetson/timeshare_imu
+output_root: /home/jetson/zed_capture_data
+livox_mode: auto  # Reuse existing /livox publishers; start existing driver only if neither exists.
+minimum_free_gb: 10
+sync_status: SYNC_PENDING
+image_encoding: 8UC2
+pixel_layout: YUYV
+intrinsics: null
+lidar_camera_extrinsics: null
+
+# C5-F experiment only. Existing raw and shadow configs unchanged.
+storage_mode: jpeg_files
+jpeg_shadow_enable: false
+jpeg_quality: 95
+jpeg_subsampling: '420'
+jpeg_sync_ms: 1000
+# Application-level proposal only. Strict DATA_INTEGRITY unchanged.
+slam_image_gap_policy:
+  max_events: 3
+  max_missing_period_ratio: 0.01
+  max_interval_ms: 100.0
+
+# GNSS-R2 opt-in. Raw/UTC reception is not GNSS-to-MID measurement synchronization.
+gnss_enable: true
+gnss_port: /dev/serial/by-id/usb-STMicroelectronics_STM32_Virtual_ComPort_5CF253593333-if00
+gnss_baud: 921600
+gnss_dtr: true
+gnss_rts: false
+
+# C5-G explicit long recording; first hardware target 300s, 1200s not enabled.
+long_recording: true
+
+# L2-D2 isolated 30-second controlled test; no original profile modified.
+ima1_read_diagnostics: false
+ima1_diagnostic_build_manifest: /home/jetson/zed_capture_ws/diagnostics/ima1_l2d2/build_candidate_03/build_manifest.json

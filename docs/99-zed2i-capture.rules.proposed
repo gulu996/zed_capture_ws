@@ -1,0 +1,5 @@
+# PROPOSAL ONLY. Not installed. Requires explicit approval and host permission check.
+# Permit only the Jetson user's group, without broad 0666 access or STM32 rules.
+SUBSYSTEM=="usb", ATTR{idVendor}=="2b03", ATTR{idProduct}=="f880", GROUP="jetson", MODE="0660"
+SUBSYSTEM=="usb", ATTR{idVendor}=="2b03", ATTR{idProduct}=="f881", ATTR{serial}=="38003368", GROUP="jetson", MODE="0660"
+SUBSYSTEM=="video4linux", ATTRS{idVendor}=="2b03", ATTRS{idProduct}=="f880", GROUP="jetson", MODE="0660"

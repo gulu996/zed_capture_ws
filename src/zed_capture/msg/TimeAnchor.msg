@@ -1,0 +1,13 @@
+std_msgs/Header header
+uint64 reader_monotonic_ns
+uint64 writer_epoch
+uint64 write_sequence
+uint64 imu_stamp_ns
+uint64 host_monotonic_ns
+uint64 update_monotonic_ns
+uint32 clock_source
+bool ready
+uint64 uncertainty_ns
+uint64 skipped_updates
+uint8[] raw_state
+string validity

@@ -1,0 +1,23 @@
+# Header stamp = original V4L2 buffer timestamp, NOT exposure center or UTC.
+std_msgs/Header header
+uint64 pair_id
+uint64 oc_frame_id
+uint64 oc_rebased_ns
+int64 v4l2_sec
+int64 v4l2_usec
+uint32 v4l2_sequence
+uint32 v4l2_flags
+uint32 timestamp_type
+uint32 timestamp_source
+uint32 bytesused
+uint32 buffer_length
+uint32 row_stride
+uint32 pixel_format
+uint32 field
+uint32 stereo_width
+uint32 height
+uint64 dq_monotonic_before_ns
+uint64 dq_monotonic_after_ns
+uint64 dq_realtime_ns
+bool payload_valid
+string sync_status

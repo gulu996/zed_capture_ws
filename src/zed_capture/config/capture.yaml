@@ -1,0 +1,15 @@
+# No calibration, fusion, depth, CUDA, SDK, image rotation or 0.1 s compensation.
+resolution: HD1080
+fps: 30
+serial: 38003368
+video_id: -1
+queue_mb: 256
+anchor_path: /home/jetson/timeshare_imu
+output_root: /home/jetson/zed_capture_data
+livox_mode: auto  # Reuse existing /livox publishers; start existing driver only if neither exists.
+minimum_free_gb: 10
+sync_status: SYNC_PENDING
+image_encoding: 8UC2
+pixel_layout: YUYV
+intrinsics: null
+lidar_camera_extrinsics: null

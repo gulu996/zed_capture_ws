@@ -1,0 +1,4 @@
+{
+  "gnss_r1_compat.py": "072498d9ba7c9112811ac69d601f763ca4e41748840ca4db7d2e248085678fd6",
+  "inputs/jetson/catkin_ws/src/gnss_serial_driver/src/gnss_serial_driver/parser.py": "f581f2686506729668faff02c37a7159ca86f3b91bc875a8ae159264288d0b76"
+}
